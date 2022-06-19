@@ -1,0 +1,105 @@
+body {
+  align-content: start;
+  background-color: #f1f1f1;
+  display: grid;
+  gap: 2rem;
+  height: 100vh;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.button {
+  background-color: #673ab7;
+  -webkit-border-radius: 3.125rem;
+  -moz-border-radius: 3.125rem;
+  -ms-border-radius: 3.125rem;
+  -o-border-radius: 3.125rem;
+  border-radius: 3.125rem;
+  color: #fff;
+  display: inline-block;
+  overflow: hidden;
+  padding: 0.813rem 1.875rem;
+  position: relative;
+}
+
+.button--opacity::before {
+  background-color: #fff;
+  clip-path: circle(0 at center);
+  content: '';
+  height: 100%;
+  left: 0;
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  -webkit-transition: clip-path 0.3s;
+  -moz-transition: clip-path 0.3s;
+  -ms-transition: clip-path 0.3s;
+  -o-transition: clip-path 0.3s;
+  transition: clip-path 0.3s;
+  width: 100%;
+}
+
+.button--bg {
+  background-color: #fff;
+  color: #000;
+}
+
+.button--bg::before {
+  background-color: #673ab7;
+  clip-path: circle(0 at top left);
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  -webkit-transition: clip-path 0.3s;
+  -moz-transition: clip-path 0.3s;
+  -ms-transition: clip-path 0.3s;
+  -o-transition: clip-path 0.3s;
+  transition: clip-path 0.3s;
+  width: 100%;
+}
+
+.button--opacity:hover::before {
+  clip-path: circle(100% at center);
+}
+
+.button--bg:hover::before {
+  clip-path: circle(150% at top left);
+}
+
+.button--bg:hover {
+  color: #fff;
+}
+
+.button__text {
+  position: relative;
+  z-index: 1;
+}
+
+.link {
+  color: #673ab7;
+  display: inline-block;
+  font-size: 1.5rem;
+  justify-self: start;
+}
+
+.link::after {
+  background-color: #673ab7;
+  clip-path: circle(0 at center);
+  content: '';
+  display: block;
+  height: 0.188rem;
+  margin-top: 0.625rem;
+  -webkit-transition: clip-path 0.5s;
+  -moz-transition: clip-path 0.5s;
+  -ms-transition: clip-path 0.5s;
+  -o-transition: clip-path 0.5s;
+  transition: clip-path 0.5s;
+  width: 100%;
+}
+
+.link:hover::after {
+  clip-path: polygon(0, 0, 100%, 0, 100%, 100%, 0, 100%);
+  clip-path: circle(100% at center);
+}
